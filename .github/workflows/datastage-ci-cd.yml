@@ -1,0 +1,31 @@
+name: DataStage CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup IBM DataStage CLI
+        run: |
+          # Install any required tools or dependencies for DataStage CLI
+
+      - name: Build DataStage Project
+        run: |
+          # Replace with your actual build commands
+          # For example, import .isx file into DataStage repository
+
+      - name: Deploy DataStage Project
+        run: |
+          # Replace with your actual deploy commands
+          # For example, deploy .isx file to DataStage server
+
+      - name: Clean up
+        run: |
+          # Remove any temporary files or perform any necessary clean-up
