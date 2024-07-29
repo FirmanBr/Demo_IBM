@@ -10,5 +10,13 @@ pipeline {
                 }
             }
         }
+        stage('Build DataStage') {
+            steps {
+                script {
+                    // Contoh: Menjalankan skrip shell yang memanggil perintah DataStage
+                echo"Menjalankan Proses BUILD"
+                }
+            }
+        }
     }
 }
