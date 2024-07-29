@@ -13,21 +13,30 @@ pipeline {
         stage('Build DataStage') {
             steps {
                 script {
-                Echo " Sukses Menjanlankan JOB IBM DataStage"
+                    // Menyusun perintah untuk build DataStage
+                    sh '''
+                    echo "Sukses Menjalankan JOB IBM DataStage Build"
+                    '''
                 }
             }
         }
         stage('Test DataStage') {
             steps {
                 script {
-                Echo " Sukses Menjanlankan JOB Test IBM DataStage"
+                    // Menyusun perintah untuk testing DataStage
+                    sh '''
+                    echo "Sukses Menjalankan JOB IBM DataStage Test"
+                    '''
                 }
             }
         }
         stage('Deploy to Dev Environment') {
             steps {
                 script {
-                Echo " Sukses Menjanlankan Deploy IBM DataStage"
+                    // Menyusun perintah untuk deploy DataStage ke environment dev
+                    sh '''
+                    echo "Sukses Menjalankan JOB IBM DataStage Deploy"
+                    '''
                 }
             }
         }
