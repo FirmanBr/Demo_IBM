@@ -9,6 +9,6 @@ pipeline {
                         url: 'https://github.com/FirmanBr/Demo_IBM.git'
                 }
             }
-        }
-    }
+        }
+    }
 }
