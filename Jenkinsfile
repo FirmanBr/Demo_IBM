@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/FirmanBr/Demo_IBM.git', branch: 'main'
+                git url: 'https://github.com/username/repository.git', branch: 'main'
             }
         }
 
@@ -28,9 +28,7 @@ pipeline {
                     echo "Running DataStage job..."
                     // Gantilah dengan perintah yang diperlukan untuk menjalankan job di IBM DataStage
                     // Misalnya menggunakan CLI atau API DataStage
-                    //sh '''
-                    //dsjob -run -wait $DS_PROJECT $DS_JOB
-                    '''
+   
                 }
             }
         }
