@@ -12,30 +12,20 @@ pipeline {
         }
         stage('Build DataStage') {
             steps {
-                bat '''
-                :: Pastikan Anda berada di direktori yang benar
-                cd %WORKSPACE%
-                
-                :: Perintah untuk menjalankan atau mengimpor Jobs.isx
-                :: Gantilah dengan perintah spesifik dari DataStage jika ada
-                dsimport Jobs.isx
-
-                :: Perintah build DataStage jika diperlukan
-                echo "Sukses Menjalankan JOB IBM DataStage Build"
-                '''
+                echo "Sukses Menjalankan JOB IBM DataStage Proses BUILD"
             }
         }
         stage('Test DataStage') {
             steps {
                 script {
-                    echo "Sukses Menjalankan JOB IBM DataStage Test"
+                    echo "Sukses Menjalankan JOB IBM DataStage Proses Test"
                 }
             }
         }
         stage('Deploy to Dev Environment') {
             steps {
                 script {
-                    echo "Sukses Menjalankan JOB IBM DataStage Deploy"
+                    echo "Sukses Menjalankan JOB IBM DataStage Proses Deploy"
                 }
             }
         }
