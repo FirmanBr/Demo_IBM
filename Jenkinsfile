@@ -9,7 +9,10 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/username/repository.git', branch: 'main'
+                script {
+                    git url: 'https://github.com/FirmanBr/Demo_IBM.git',
+                        credentialsId: 'github-pat'
+                }
             }
         }
 
