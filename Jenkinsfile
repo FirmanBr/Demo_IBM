@@ -16,6 +16,7 @@ pipeline {
                 }
             }
         }
+    
 
         stage('Build') {
             steps {
@@ -67,5 +68,5 @@ pipeline {
         failure {
             echo 'Pipeline failed!'
         }
-    }
+  }
 }
