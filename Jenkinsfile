@@ -28,8 +28,8 @@ pipeline {
                     echo "Running DataStage job..."
                     // Gantilah dengan perintah yang diperlukan untuk menjalankan job di IBM DataStage
                     // Misalnya menggunakan CLI atau API DataStage
-                    sh '''
-                    dsjob -run -wait $DS_PROJECT $DS_JOB
+                    //sh '''
+                    //dsjob -run -wait $DS_PROJECT $DS_JOB
                     '''
                 }
             }
