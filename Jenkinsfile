@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    environment {
+        JAVA_HOME = ''
+        ORACLE_HOME = ''
+    }
     stages {
         stage('Git Checkout') {
             steps {
