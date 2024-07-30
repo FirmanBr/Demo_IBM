@@ -1,20 +1,8 @@
 pipeline {
     agent any
-    environment {
-        JAVA_HOME = ''
-        ORACLE_HOME = ''
-    }
     stages {
-        stage('Git Checkout') {
-            steps {
-                script {
-                    git branch: 'main',
-                        credentialsId: 'f0058a63-77b9-4dc0-ba3c-2859f23e0115',
-                        url: 'https://github.com/FirmanBr/Demo_IBM.git'
-                }
-            }
-        }
-     stage('Setup Prerequisites') {
+        // Stage 1: Setup Prerequisites
+        stage('Setup Prerequisites') {
             steps {
                 script {
                     // Check and install Java 7.0 if not already installed
@@ -46,12 +34,24 @@ pipeline {
                     '''
                 }
             }
-        }        
+        }
+        // Stage 2: Git Checkout
+        stage('Git Checkout') {
+            steps {
+                script {
+                    git branch: 'main',
+                        credentialsId: 'f0058a63-77b9-4dc0-ba3c-2859f23e0115',
+                        url: 'https://github.com/FirmanBr/Demo_IBM.git'
+                }
+            }
+        }
+        // Stage 3: Build DataStage
         stage('Build DataStage') {
             steps {
                 echo "Sukses Menjalankan JOB IBM DataStage Proses BUILD"
             }
         }
+        // Stage 4: Test DataStage
         stage('Test DataStage') {
             steps {
                 script {
@@ -59,6 +59,7 @@ pipeline {
                 }
             }
         }
+        // Stage 5: Deploy to Dev Environment
         stage('Deploy to Dev Environment') {
             steps {
                 script {
