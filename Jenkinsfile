@@ -14,7 +14,7 @@ pipeline {
         stage('Setup Prerequisites') {
             steps {
                 script {
-                    echo "Sukses Menjalankan JOB IBM DataStage Proses Test"
+                    echo "Prerequisites Sudah Sukses"
                 }
             }
         }
